@@ -18,6 +18,8 @@
 
 #define MAX 3
 
+//hello world!
+
 int main(void) {
 	int num = 1;
 	int b = 0;
@@ -30,7 +32,7 @@ int main(void) {
 	while (1) {
 		
 		SetCursorVisible(true);
-		//πÊ«‚≈∞ º≥¡§
+		//Î∞©Ìñ•ÌÇ§ ÏÑ§Ï†ï
 		if (GetAsyncKeyState(VK_LEFT) & 0x8000) {
 			x--;
 			if (x < MINRL)x = MINRL;
@@ -59,7 +61,7 @@ int main(void) {
 			}
 		}
 	
-		//shift∑Œ ¿ÃπÃ¡ˆ º±≈√
+		//shiftÎ°ú Ïù¥ÎØ∏ÏßÄ ÏÑ†ÌÉù
 		if (GetAsyncKeyState(VK_SHIFT) & 0x8000) {
 			num++;
 			Sleep(50);
@@ -68,7 +70,7 @@ int main(void) {
 			}
 		}
 		
-		//Ω∫∆‰¿ÃΩ∫∑Œ ¿ÃπÃ¡ˆ √‚∑¬ ∏Ì∑…
+		//Ïä§ÌéòÏù¥Ïä§Î°ú Ïù¥ÎØ∏ÏßÄ Ï∂úÎ†• Î™ÖÎ†π
 		if (GetAsyncKeyState(VK_SPACE) & 0x8000) {
 			images.x = x;
 			images.y = y;
