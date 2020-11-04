@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdbool.h>
 #include<Windows.h>
+#include"Console.h"
 
 void printline1()
 {
@@ -107,7 +108,7 @@ void printrabbit(ST_ImagePrint images) {
 	printf("旨收↙收↙收收收收旬");
 
 	GotoXY((images.x), (images.y) + 3);
-	printf("Ⅴ * ..Ⅴ");
+	printf("Ⅴ *     ..Ⅴ");
 
 	GotoXY((images.x), (images.y) + 4);
 	printf("曲收收收收收收收收收收旭");

@@ -23,7 +23,8 @@
 int main(void) {
 	int num = 1;
 	int b = 0;
-	ST_ImagePrint images = { 0,0,false };
+	ST_ImagePrint ST_images = { 0,0,false };
+
 	int x = 42, y = 1;
 	SetConsoleSize(SIZE_MAXRL, SIZE_MAXUD);
 	printallline();
@@ -50,14 +51,14 @@ int main(void) {
 			if (y > MAXUD)y = MAXUD;
 		}
 		for (int a = 0; a < 5; a++) {
-			if (images.act == true) {
+			if (ST_images.act == true) {
 				if (num == 1) {
-					printbaby(images);
+					printbaby(ST_images);
 				}
 				if (num == 2) {
-					printrabbit(images);
+					printrabbit(ST_images);
 				}
-				images.act = false;
+				ST_images.act = false;
 			}
 		}
 	
@@ -72,9 +73,9 @@ int main(void) {
 		
 		//스페이스로 이미지 출력 명령
 		if (GetAsyncKeyState(VK_SPACE) & 0x8000) {
-			images.x = x;
-			images.y = y;
-			images.act = true;
+			ST_images.x = x;
+			ST_images.y = y;
+			ST_images.act = true;
 			Sleep(50);
 			b++;
 		}
