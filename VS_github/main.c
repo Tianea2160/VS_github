@@ -18,7 +18,12 @@
 
 #define MAX 3
 
-//hello world!
+void view_cusor_position(int x, int y, bool act){
+	if (act) {
+		GotoXY(115,34 );
+		printf("x : %d, y : %d", x, y);
+	}
+}
 
 int main(void) {
 	int num = 1;
@@ -79,6 +84,7 @@ int main(void) {
 			Sleep(50);
 			b++;
 		}
+		view_cusor_position(x, y, true);
 		GotoXY(x, y);
 		Sleep(50);
 		
