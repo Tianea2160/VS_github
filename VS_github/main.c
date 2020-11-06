@@ -31,7 +31,7 @@ void text_entry(void)
 
 	while (1)
 	{
-		if (GetAsyncKeyState(VK_CONTROL) & 0x11) //컨트롤키로 텍스트 입력 받음
+		if (GetAsyncKeyState(VK_CONTROL) & 0x11) //컨트롤로 텍스트 입력 받음
 		{
 			printf("입력가능: ");
 			fgets(str, 100, stdin);
