@@ -84,7 +84,7 @@ int main(void) {
 			Sleep(50);
 			b++;
 		}
-		view_cusor_position(x, y, true);
+		view_cusor_position(x, y, false);
 		GotoXY(x, y);
 		Sleep(50);
 		
