@@ -25,6 +25,23 @@ void view_cusor_position(int x, int y, bool act){
 	}
 }
 
+void text_entry(void)
+{
+	char str[100];
+
+	while (1)
+	{
+		if (GetAsyncKeyState(VK_CONTROL) & 0x11) //컨트롤키로 텍스트 입력 받음
+		{
+			printf("입력가능: ");
+			fgets(str, 100, stdin);
+
+			if (GetAsyncKeyState(VK_RETURN) & 0x0D)
+				break;
+		}
+	}
+}
+
 int main(void) {
 	int num = 1;
 	int b = 0;
