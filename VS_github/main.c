@@ -6,21 +6,23 @@
 #include"Console.h"
 #include"title_and_image.h"
 
-
+//console창 사이즈
 #define SIZE_MAXRL 135
 #define SIZE_MAXUD 37
 
+//커서가 활동할 수 있는 영역 제한상수
 #define MINRL 42
 #define MINUD 1
-
 #define MAXRL 130
 #define MAXUD 33
 
+//이모티콘의 갯수 상수
 #define MAX 3
 
+//작업을 위해서 커서의 위치를 볼수 있게 만들었음
 void view_cusor_position(int x, int y, bool act){
 	if (act) {
-		GotoXY(115,34 );
+		GotoXY(115, 34);
 		printf("x : %d, y : %d", x, y);
 	}
 }
@@ -84,7 +86,8 @@ int main(void) {
 			Sleep(50);
 			b++;
 		}
-		view_cusor_position(x, y, true);
+		
+		view_cusor_position(x, y, false);
 		GotoXY(x, y);
 		Sleep(50);
 		
