@@ -2,10 +2,10 @@
 #include<stdlib.h>
 #include<Windows.h>
 #include<stdbool.h>
+#include<conio.h>
 
 #include"Console.h"
 #include"title_and_image.h"
-
 
 #define SIZE_MAXRL 135
 #define SIZE_MAXUD 37
@@ -25,35 +25,19 @@ void view_cusor_position(int x, int y, bool act){
 	}
 }
 
-void text_entry(void)
-{
-	char str[100];
-
-	while (1)
-	{
-		if (GetAsyncKeyState(VK_CONTROL) & 0x11) //컨트롤로 텍스트 입력 받음
-		{
-			printf("입력가능: ");
-			fgets(str, 100, stdin);
-
-			if (GetAsyncKeyState(VK_RETURN) & 0x0D)
-				break;
-		}
-	}
-}
-
 int main(void) {
 	int num = 1;
-	int b = 0;
+	bool act_print = false;
+	char a_input[100];
 	ST_ImagePrint ST_images = { 0,0,false };
 
 	int x = 42, y = 1;
 	SetConsoleSize(SIZE_MAXRL, SIZE_MAXUD);
 	printallline();
 
-	
+
 	while (1) {
-		
+
 		SetCursorVisible(true);
 		//방향키 설정
 		if (GetAsyncKeyState(VK_LEFT) & 0x8000) {
@@ -83,7 +67,7 @@ int main(void) {
 				ST_images.act = false;
 			}
 		}
-	
+
 		//shift로 이미지 선택
 		if (GetAsyncKeyState(VK_SHIFT) & 0x8000) {
 			num++;
@@ -92,19 +76,41 @@ int main(void) {
 				num = 1;
 			}
 		}
-		
+
 		//스페이스로 이미지 출력 명령
 		if (GetAsyncKeyState(VK_SPACE) & 0x8000) {
 			ST_images.x = x;
 			ST_images.y = y;
 			ST_images.act = true;
 			Sleep(50);
-			b++;
 		}
+		if (GetAsyncKeyState(VK_CONTROL) & 0x8000) { //컨트롤로 텍스트 입력 받음
+			if (act_print == true) {
+				act_print = false;
+			}
+			else {
+				act_print = true;
+			}
+		}
+		while (act_print) {
+			fgets(a_input, sizeof(a_input), stdin);
+
+			for (int a = 0; a < strlen(a_input); a++) {
+				if (a_input[a] == '\n') {
+					
+					GotoXY(x, y);
+					act_print = false;
+				}
+			}
+			Sleep(25);
+		}
+
+
+
 		view_cusor_position(x, y, false);
 		GotoXY(x, y);
 		Sleep(50);
-		
+
 	}
 	system("pause");
 	return 0;
