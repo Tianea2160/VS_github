@@ -30,7 +30,7 @@ int main(void) {
 	bool act_print = false;
 	char a_input[100];
 	ST_ImagePrint ST_images = { 0,0,false };
-
+	ST_ImagePrint* ptr_images = &ST_images;
 	int x = 42, y = 1;
 	SetConsoleSize(SIZE_MAXRL, SIZE_MAXUD);
 	printallline();
@@ -59,10 +59,10 @@ int main(void) {
 		for (int a = 0; a < 5; a++) {
 			if (ST_images.act == true) {
 				if (num == 1) {
-					printbaby(ST_images);
+					printbaby(ptr_images);
 				}
 				if (num == 2) {
-					printrabbit(ST_images);
+					printrabbit(ptr_images);
 				}
 				ST_images.act = false;
 			}
@@ -102,10 +102,11 @@ int main(void) {
 					act_print = false;
 				}
 			}
-			Sleep(25);
+			//a_input[100]초기화 시키기
+			for (int a = 0; a < strlen(a_input); a++) {
+				a_input[a] = 0;
+			}
 		}
-
-
 
 		view_cusor_position(x, y, false);
 		GotoXY(x, y);
