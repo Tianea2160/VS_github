@@ -20,14 +20,14 @@
 #define MAX 3
 
 
-void view_cusor_position(int x, int y, bool act){
+void view_cusor_position(int x, int y, bool act) {
 	if (act) {
-		GotoXY(115,34 );
+		GotoXY(115, 34);
 		printf("x : %d, y : %d", x, y);
 	}
 }
 
-void text_entry(int x, int y){
+void text_entry(int x, int y) {
 	char a_input[100];
 	bool act_print = true;
 
@@ -47,7 +47,6 @@ void text_entry(int x, int y){
 	}
 
 }
-
 
 
 int main(void) {
@@ -121,20 +120,7 @@ int main(void) {
 			}
 			GotoXY(x, y);
 		}
-		while (act_print) {
-			fflush(stdout);
-			fgets(a_input, sizeof(a_input), stdin);
-			for (int a = 0; a < strlen(a_input); a++) {
-				if (a_input[a] == '\n') {
-					GotoXY(x, y);
-					act_print = false;
-				}
-			}
-			//a_input[100]초기화 시키기
-			for (int a = 0; a < strlen(a_input); a++) {
-				a_input[a] = 0;
-			}
-		}
+		
 
 		//컨트롤로 텍스트 입력
 		if (GetAsyncKeyState(VK_CONTROL) & 0x8000) {
