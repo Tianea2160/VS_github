@@ -1,10 +1,15 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<Windows.h>
 #include<stdbool.h>
+#include <conio.h>
 
 #include"Console.h"
 #include"title_and_image.h"
+
+#define KEY_UP_REP   0
 
 
 #define SIZE_MAXRL 135
@@ -18,6 +23,7 @@
 
 #define MAX 3
 
+
 void view_cusor_position(int x, int y, bool act){
 	if (act) {
 		GotoXY(115,34 );
@@ -25,22 +31,28 @@ void view_cusor_position(int x, int y, bool act){
 	}
 }
 
-void text_entry(void)
-{
-	char str[100];
+void text_entry(int x, int y){
+	char a_input[100];
+	bool act_print = true;
 
-	while (1)
-	{
-		if (GetAsyncKeyState(VK_CONTROL) & 0x11) //컨트롤로 텍스트 입력 받음
-		{
-			printf("입력가능: ");
-			fgets(str, 100, stdin);
+	fseek(stdin, 0, SEEK_SET);
 
-			if (GetAsyncKeyState(VK_RETURN) & 0x0D)
-				break;
+	while (act_print) {
+		fgets(a_input, sizeof(a_input), stdin);
+
+		for (int a = 0; a < strlen(a_input); a++) {
+			if (a_input[a] == '\n') {
+
+				GotoXY(x, y);
+				act_print = false;
+			}
 		}
+		Sleep(25);
 	}
+
 }
+
+
 
 int main(void) {
 	int num = 1;
@@ -101,7 +113,13 @@ int main(void) {
 			Sleep(50);
 			b++;
 		}
-		view_cusor_position(x, y, false);
+
+		//컨트롤로 텍스트 입력
+		if (GetAsyncKeyState(VK_CONTROL) & 0x8000) {
+			text_entry(x, y);
+		}
+
+		view_cusor_position(x, y, true);
 		GotoXY(x, y);
 		Sleep(50);
 		
