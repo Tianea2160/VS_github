@@ -34,13 +34,14 @@ void text_entry(int x, int y) {
 	int key;
 
 	while (act_print) {
+		
 		if (_kbhit()) {
 			key = _getch();
 			if (key == 13) {
 				fgets(a_input, 100, stdin);
 			}
 		}
-
+		
 		for (int a = 0; a < strlen(a_input); a++) {
 			if (a_input[a] == '\n') {
 
@@ -116,21 +117,14 @@ int main(void) {
 				ST_images.act = true;
 				Sleep(50);
 			}
-			if (GetAsyncKeyState(VK_CONTROL) & 0x8000) { //컨트롤로 텍스트 입력 받음
-				if (act_print == true) {
-					act_print = false;
-				}
-				else {
-					act_print = true;
-				}
-			}
-			GotoXY(x, y);
-		}
-		
 
-		//엔터로 텍스트 입력
-		if (GetAsyncKeyState(VK_RETURN) & 0x8000) {
-			text_entry(x, y);
+			//엔터로 텍스트 입력
+			if (GetAsyncKeyState(VK_RETURN) & 0x8000) {
+				text_entry(x, y);
+			}
+			
+			GotoXY(x, y);
+			
 		}
 		
 
