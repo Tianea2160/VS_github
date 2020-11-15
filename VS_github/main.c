@@ -137,8 +137,17 @@ int main(void) {
 		view_cusor_position(x, y, true);
 		GotoXY(x, y);
 		Sleep(50);
+		
+		if (GetAsyncKeyState(VK_BACK) & 0x8000) { //Backspace로 되돌리기 기능
+			for (int i = 0; i < 5; i++)
+			{
+				GotoXY(x, y + i);
+				printf("             \n");
+			}
 
+		}
 	}
+	
 	system("pause");
 	return 0;
 }
