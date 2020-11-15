@@ -14,11 +14,18 @@
 
 
 //마우스가 움직일수 있는 값의 범위
+/*
 #define MINRL 36
 #define MINUD 1
 
 #define MAXRL 130
 #define MAXUD 35
+*/
+#define MINRL 0
+#define MINUD 0
+
+#define MAXRL 123
+#define MAXUD 50
 
 //이미지 개수
 #define MAX 3
@@ -128,6 +135,15 @@ int main(void) {
 			if (GetAsyncKeyState(VK_RETURN) & 0x8000) {
 				text_entry(x, y);
 			}
+
+			//Backspace로 되돌리기 기능
+			if (GetAsyncKeyState(VK_BACK) & 0x8000) { 
+				for (int i = 0; i < 5; i++)
+				{
+					GotoXY(x, y + i);
+					printf("         ");
+				}
+			}
 			GotoXY(x, y);
 		}
 		
@@ -136,15 +152,8 @@ int main(void) {
 		GotoXY(x, y);
 		Sleep(50);
 		
-		if (GetAsyncKeyState(VK_BACK) & 0x8000) { //Backspace로 되돌리기 기능
-			for (int i = 0; i < 5; i++)
-			{
-				GotoXY(x, y + i);
-				printf("         ");
-			}
-		}
+		
 	}
-	
 	system("pause");
 	return 0;
 }

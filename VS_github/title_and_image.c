@@ -530,25 +530,6 @@ void printline14()//¹ØÄ­5
 
 }
 
-void printallline()
-{
-    printmain("");
-    printline1("");
-    printline2("");
-    printline3("");
-    printline4("");
-    printline5("");
-    printline6("");
-    printline7("");
-    printline8("");
-    printline9("");
-    printline10("");
-    printline11("");
-    printline12("");
-    printline13("");
-    printline14("");
-}
-
 void printrabbit(ST_ImagePrint* images) {
 
 	GotoXY((*images).x, (*images).y);
@@ -573,4 +554,27 @@ void printbaby(ST_ImagePrint* images) {
 	printf("  (,,*¢£*)");
 	GotoXY((*images).x, (*images).y+2);
 	printf("¢¦(_£õ,£õ)");
+}
+void printallline()
+{
+    ST_ImagePrint rabbit = { 31,39 };
+    ST_ImagePrint baby = { 8,40 };
+    printmain("");
+    printline1("");
+    printline2("");
+    printline3("");
+    printline4("");
+    printline5("");
+    printline6("");
+    printline7("");
+    printline8("");
+    printline9("");
+    printline10("");
+    printline11("");
+    printline12("");
+    printline13("");
+    printline14("");
+
+    printrabbit(&rabbit);
+    printbaby(&baby);
 }
