@@ -7,18 +7,20 @@
 #include"Console.h"
 #include"title_and_image.h"
 
-
+//콘솔창의 범위
 #define SIZE_MAXRL 135
 #define SIZE_MAXUD 37
 
+//마우스가 움직일수 있는 값의 범위
 #define MINRL 42
 #define MINUD 1
 
 #define MAXRL 130
 #define MAXUD 33
 
+//이미지 개수
 #define MAX 3
-
+int size = 0;
 
 void view_cusor_position(int x, int y, bool act) {
 	if (act) {
@@ -34,21 +36,24 @@ void text_entry(int x, int y) {
 	int key;
 
 	while (act_print) {
-		
+
 		if (_kbhit()) {
 			key = _getch();
 			if (key == 13) {
 				fgets(a_input, 100, stdin);
 			}
 		}
-		
-		for (int a = 0; a < strlen(a_input); a++) {
+		size = strlen(a_input);
+		for (int a = 0; a < size; a++) {
 			if (a_input[a] == '\n') {
-
+				//a_input 초기화
+				for (int a = 0; a < size; a++)
+					a_input[a] = 0;
 				GotoXY(x, y);
 				act_print = false;
 			}
 		}
+		
 		Sleep(25);
 	}
 
@@ -122,9 +127,7 @@ int main(void) {
 			if (GetAsyncKeyState(VK_RETURN) & 0x8000) {
 				text_entry(x, y);
 			}
-			
 			GotoXY(x, y);
-			
 		}
 		
 
@@ -136,9 +139,8 @@ int main(void) {
 			for (int i = 0; i < 5; i++)
 			{
 				GotoXY(x, y + i);
-				printf("             \n");
+				printf("         ");
 			}
-
 		}
 	}
 	
