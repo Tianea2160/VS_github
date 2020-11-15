@@ -1,5 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS
-
 #include<stdio.h>
 #include<stdlib.h>
 #include<Windows.h>
@@ -8,8 +6,6 @@
 
 #include"Console.h"
 #include"title_and_image.h"
-
-#define KEY_UP_REP   0
 
 
 #define SIZE_MAXRL 135
