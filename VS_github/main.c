@@ -27,14 +27,19 @@ void view_cusor_position(int x, int y, bool act) {
 	}
 }
 
+
 void text_entry(int x, int y) {
 	char a_input[100];
 	bool act_print = true;
-
-	fseek(stdin, 0, SEEK_SET);
+	int key;
 
 	while (act_print) {
-		fgets(a_input, sizeof(a_input), stdin);
+		if (_kbhit()) {
+			key = _getch();
+			if (key == 13) {
+				fgets(a_input, 100, stdin);
+			}
+		}
 
 		for (int a = 0; a < strlen(a_input); a++) {
 			if (a_input[a] == '\n') {
@@ -47,6 +52,7 @@ void text_entry(int x, int y) {
 	}
 
 }
+
 
 
 int main(void) {
@@ -122,10 +128,11 @@ int main(void) {
 		}
 		
 
-		//컨트롤로 텍스트 입력
-		if (GetAsyncKeyState(VK_CONTROL) & 0x8000) {
+		//엔터로 텍스트 입력
+		if (GetAsyncKeyState(VK_RETURN) & 0x8000) {
 			text_entry(x, y);
 		}
+		
 
 		view_cusor_position(x, y, true);
 		GotoXY(x, y);
