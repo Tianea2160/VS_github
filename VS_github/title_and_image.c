@@ -96,28 +96,28 @@ typedef struct ST_imageprint {
 	bool act;
 }ST_ImagePrint;
 
-void printrabbit(ST_ImagePrint images) {
+void printrabbit(ST_ImagePrint* images) {
 
-	GotoXY((images.x), (images.y));
+	GotoXY((*images).x, (*images).y);
 	printf(" / ) / )");
 
-	GotoXY((images.x), (images.y) + 1);
+	GotoXY((*images).x, (*images).y+1);
 	printf("(.*¤µ *.)¢½");
 
-	GotoXY((images.x), (images.y) + 2);
+	GotoXY((*images).x, (*images).y+2);
 	printf("¦®¦¬¡ú¦¬¡ú¦¬¦¬¦¬¦¬¦¯");
 
-	GotoXY((images.x), (images.y) + 3);
+	GotoXY((*images).x, (*images).y+3);
 	printf("¢½ *     ..¢½");
 
-	GotoXY((images.x), (images.y) + 4);
+	GotoXY((*images).x, (*images).y+4);
 	printf("¦±¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦°");
 }
-void printbaby(ST_ImagePrint images) {
-	GotoXY((images.x), (images.y));
+void printbaby(ST_ImagePrint* images) {
+	GotoXY((*images).x, (*images).y);
 	printf("¡¡ ¡ü,,¡ü");
-	GotoXY((images.x), (images.y) + 1);
+	GotoXY((*images).x, (*images).y+1);
 	printf("  (,,*¢£*)");
-	GotoXY((images.x), (images.y) + 2);
+	GotoXY((*images).x, (*images).y+2);
 	printf("¢¦(_£õ,£õ)");
 }

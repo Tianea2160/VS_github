@@ -5,5 +5,5 @@ typedef struct ST_imageprint {
 }ST_ImagePrint;
 
 void printallline(void);
-void printrabbit(ST_ImagePrint images);
-void printbaby(ST_ImagePrint images);
+void printrabbit(ST_ImagePrint* images);
+void printbaby(ST_ImagePrint* images);
