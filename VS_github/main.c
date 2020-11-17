@@ -6,23 +6,34 @@
 
 #include"Console.h"
 #include"title_and_image.h"
+#pragma warning (disable :6054)
+
+//콘솔창의 범위
+#define SIZE_MAXRL 123
+#define SIZE_MAXUD 50
 
 
-#define SIZE_MAXRL 135
-#define SIZE_MAXUD 37
-
-#define MINRL 42
+//마우스가 움직일수 있는 값의 범위
+/*
+#define MINRL 36
 #define MINUD 1
 
 #define MAXRL 130
-#define MAXUD 33
+#define MAXUD 35
+*/
+#define MINRL 0
+#define MINUD 0
 
+#define MAXRL 123
+#define MAXUD 50
+
+//이미지 개수
 #define MAX 3
-
+int size = 0;
 
 void view_cusor_position(int x, int y, bool act) {
 	if (act) {
-		GotoXY(115, 34);
+		GotoXY(106, 35);
 		printf("x : %d, y : %d", x, y);
 	}
 }
@@ -34,21 +45,24 @@ void text_entry(int x, int y) {
 	int key;
 
 	while (act_print) {
-		
+
 		if (_kbhit()) {
 			key = _getch();
 			if (key == 13) {
 				fgets(a_input, 100, stdin);
 			}
 		}
-		
-		for (int a = 0; a < strlen(a_input); a++) {
+		size = strlen(a_input);
+		for (int a = 0; a < size; a++) {
 			if (a_input[a] == '\n') {
-
+				//a_input 초기화
+				for (int a = 0; a < size; a++)
+					a_input[a] = 0;
 				GotoXY(x, y);
 				act_print = false;
 			}
 		}
+		
 		Sleep(25);
 	}
 
@@ -59,7 +73,6 @@ void text_entry(int x, int y) {
 int main(void) {
 	int num = 1;
 	bool act_print = false;
-	char a_input[100];
 
 	ST_ImagePrint ST_images = { 0,0,false };
 	ST_ImagePrint* ptr_images = &ST_images;
@@ -122,9 +135,16 @@ int main(void) {
 			if (GetAsyncKeyState(VK_RETURN) & 0x8000) {
 				text_entry(x, y);
 			}
-			
+
+			//Backspace로 되돌리기 기능
+			if (GetAsyncKeyState(VK_BACK) & 0x8000) { 
+				for (int i = 0; i < 5; i++)
+				{
+					GotoXY(x, y + i);
+					printf("         ");
+				}
+			}
 			GotoXY(x, y);
-			
 		}
 		
 
@@ -132,16 +152,8 @@ int main(void) {
 		GotoXY(x, y);
 		Sleep(50);
 		
-		if (GetAsyncKeyState(VK_BACK) & 0x8000) { //Backspace로 되돌리기 기능
-			for (int i = 0; i < 5; i++)
-			{
-				GotoXY(x, y + i);
-				printf("             \n");
-			}
-
-		}
+		
 	}
-	
 	system("pause");
 	return 0;
 }
