@@ -9,7 +9,7 @@
 #pragma warning (disable :6054)
 
 //콘솔창의 범위
-#define SIZE_MAXRL 123
+#define SIZE_MAXRL 130
 #define SIZE_MAXUD 50
 
 
@@ -28,7 +28,7 @@
 #define MAXUD 50
 
 //이미지 개수
-#define MAX 3
+#define MAX 12
 int size = 0;
 
 void view_cusor_position(int x, int y, bool act) {
@@ -79,7 +79,8 @@ int main(void) {
 
 	int x = 42, y = 1;
 	SetConsoleSize(SIZE_MAXRL, SIZE_MAXUD);
-	printallline();
+	PrintAllLine();
+	PreimagePrint();
 	SetCursorVisible(true);
 
 	while (1) {
@@ -102,23 +103,57 @@ int main(void) {
 				y++;
 				if (y > MAXUD)y = MAXUD;
 			}
-			for (int a = 0; a < 5; a++) {
-				if (ST_images.act == true) {
-					if (num == 1) {
-						printbaby(ptr_images);
-					}
-					if (num == 2) {
-						printrabbit(ptr_images);
-					}
-					ST_images.act = false;
+			
+			if (ST_images.act == true) {
+				switch (num) {
+				case 1:
+					print_line1(ptr_images);
+					break;
+				case 2:
+					print_line2(ptr_images);
+					break;
+				case 3:
+					print_line3(ptr_images);
+					break;
+				case 4:
+					print_line4(ptr_images);
+					break;
+				case 5:
+					print_line5(ptr_images);
+					break;
+				case 6:
+					print_line6(ptr_images);
+					break;
+				case 7:
+					print_line7(ptr_images);
+					break;
+				case 8:
+					print_line8(ptr_images);
+					break;
+				case 9:
+					print_line9(ptr_images);
+					break;
+				case 10:
+					print_line10(ptr_images);
+					break;
+				case 11:
+					print_line11(ptr_images);
+					break;
+				case 12:
+					print_line12(ptr_images);
+					break;
 				}
+				ST_images.act = false;
 			}
+			
 
 			//shift로 이미지 선택
 			if (GetAsyncKeyState(VK_SHIFT) & 0x8000) {
 				num++;
-				Sleep(50);
-				if (num == MAX) {
+				Sleep(25);
+				GotoXY(123, 2);
+				printf("%2d", num);
+				if (num > MAX) {
 					num = 1;
 				}
 			}

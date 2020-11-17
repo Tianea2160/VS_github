@@ -530,35 +530,145 @@ void printline14()//밑칸5
 
 }
 
-void printrabbit(ST_ImagePrint* images) {
-
-	GotoXY((*images).x, (*images).y);
-	printf(" / ) / )");
-
-	GotoXY((*images).x, (*images).y+1);
-	printf("(.*ㅅ *.)♡");
-
-	GotoXY((*images).x, (*images).y+2);
-	printf("┏━∪━∪━━━━┓");
-
-	GotoXY((*images).x, (*images).y+3);
-	printf("♡ *     ..♡");
-
-	GotoXY((*images).x, (*images).y+4);
-	printf("┗━━━━━━━━━━┛");
+//image 출력 정의
+void print_line1(ST_ImagePrint* images) {
+    GotoXY((*images).x, (*images).y);
+    printf("(*n'˘'n*)");
 }
-void printbaby(ST_ImagePrint* images) {
-	GotoXY((*images).x, (*images).y);
-	printf("　 ∧,,∧");
-	GotoXY((*images).x, (*images).y+1);
-	printf("  (,,*∀*)");
-	GotoXY((*images).x, (*images).y+2);
-	printf("～(_ｕ,ｕ)");
+
+void print_line2(ST_ImagePrint* images) {
+    GotoXY((*images).x, (*images).y);
+    printf("(*σ´∀`)σ");
 }
-void printallline()
+
+void print_line3(ST_ImagePrint* images) {
+    GotoXY((*images).x, (*images).y);
+    printf("(*˙˘˙)♡");
+}
+
+void print_line4(ST_ImagePrint* images) {
+    GotoXY((*images).x, (*images).y);
+    printf("===== *.*.* =====");
+}
+
+void print_line5(ST_ImagePrint* images) {
+    GotoXY((*images).x, (*images).y);
+    printf("☆.。.:*·°☆.。.:*·°☆");
+}
+
+void print_line6(ST_ImagePrint* images) {
+    GotoXY((*images).x, (*images).y);
+    printf("°l||l°l||l°l||l°l||l");
+}
+
+void print_line7(ST_ImagePrint* images) {
+    GotoXY((*images).x, (*images).y);
+    printf("┍── ▽◇▽──┑");
+}
+
+void print_line8(ST_ImagePrint* images) {
+    GotoXY((*images).x, (*images).y);
+    printf("┕── △◇△──┙");
+}
+
+void print_line9(ST_ImagePrint* images) {
+    GotoXY((*images).x, (*images).y);
+    printf("ⓦⓞⓦ");
+}
+
+void print_line10(ST_ImagePrint* images) {
+    GotoXY((*images).x, (*images).y);
+    printf("　 ∧,,∧");
+    GotoXY((*images).x, (*images).y + 1);
+    printf("  (,,*∀*)");
+    GotoXY((*images).x, (*images).y + 2);
+    printf("～(_ｕ,ｕ)");
+}
+
+void print_line11(ST_ImagePrint* images) {
+
+    GotoXY((*images).x, (*images).y);
+    printf(" / ) / )");
+
+    GotoXY((*images).x, (*images).y + 1);
+    printf("(.*ㅅ *.)♡");
+
+    GotoXY((*images).x, (*images).y + 2);
+    printf("┏━∪━∪━━━━┓");
+
+    GotoXY((*images).x, (*images).y + 3);
+    printf("♡ *     ..♡");
+
+    GotoXY((*images).x, (*images).y + 4);
+    printf("┗━━━━━━━━━━┛");
+}
+
+void print_line12(ST_ImagePrint* images) {
+    GotoXY((*images).x, (*images).y);
+    printf("    │  │  │");
+    GotoXY((*images).x, (*images).y + 1);
+    printf(" ┍  │  ┕  │");
+    GotoXY((*images).x, (*images).y + 2);
+    printf(" │  │  ┍  │");
+    GotoXY((*images).x, (*images).y + 3);
+    printf("    │  │  │");
+    GotoXY((*images).x, (*images).y + 4);
+    printf(" ━━━┙  ┙ ━");
+}
+/*
+printf("(*n'˘'n*)");
+   printf("(*σ´∀`)σ");
+   printf("(*˙˘˙)♡");
+   printf("_(ツ)_/");
+   printf("===== *.*.* =====");
+   printf("☆.。.:*·°☆.。.:*·°☆");
+   printf("°l||l°l||l°l||l°l||l°l||l°");
+
+   printf("┍── ▽◇▽──┑\n");
+   printf("%7s\n", " ");
+   printf("┕── △◇△──┙\n");
+   printf("ⓦⓞⓦ");
+
+   printf("    │  │  │\n");
+   printf(" ┍  │  ┕  │\n");
+   printf(" │  │  ┍  │\n");
+   printf("    │  │  │\n");
+   printf(" ━━━┙  ┙ ━┙\n");
+
+
+*/
+void PreimagePrint(void) {
+    //미리보기 이미지 출력 좌표 
+    ST_ImagePrint line1 = { 3,2 };
+    ST_ImagePrint line2 = { 3,6 };
+    ST_ImagePrint line3 = { 3,10 };
+    ST_ImagePrint line4 = { 3,14 };
+    ST_ImagePrint line5 = { 3,18 };
+    ST_ImagePrint line6 = { 3,22 };
+    ST_ImagePrint line7 = { 3,26 };
+    ST_ImagePrint line8 = { 3,30 };
+    ST_ImagePrint line9 = { 3,34 };
+    ST_ImagePrint line10 = { 8,40 };
+    ST_ImagePrint line11 = { 31,39 };
+    ST_ImagePrint line12 = { 54,39 };
+
+    //미리보기 이미지 출력
+    print_line1(&line1);
+    print_line2(&line2);
+    print_line3(&line3);
+    print_line4(&line4);
+    print_line5(&line5);
+    print_line6(&line6);
+    print_line7(&line7);
+    print_line8(&line8);
+    print_line9(&line9);
+    print_line10(&line10);
+    print_line11(&line11);
+    print_line12(&line12);
+}
+void PrintAllLine()
 {
-    ST_ImagePrint rabbit = { 31,39 };
-    ST_ImagePrint baby = { 8,40 };
+    //밑은 테두리 출력
     printmain("");
     printline1("");
     printline2("");
@@ -574,7 +684,4 @@ void printallline()
     printline12("");
     printline13("");
     printline14("");
-
-    printrabbit(&rabbit);
-    printbaby(&baby);
 }
