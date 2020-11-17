@@ -2,6 +2,7 @@
 #include<stdbool.h>
 #include<Windows.h>
 #include"Console.h"
+#include <conio.h>
 
 typedef struct ST_imageprint {
 	int x, y;
@@ -684,4 +685,56 @@ void PrintAllLine()
     printline12("");
     printline13("");
     printline14("");
+}
+
+void view_cusor_position(int x, int y, bool act) {
+    if (act) {
+        GotoXY(106, 35);
+        printf("x : %d, y : %d", x, y);
+    }
+}
+
+
+void text_entry(int x, int y) {
+    char a_input[100];
+    bool act_print = true;
+    int key, size;
+
+    while (act_print) {
+
+        if (_kbhit()) {
+            key = _getch();
+            if (key == 13)
+                fgets(a_input, 100, stdin);
+        }
+        size = strlen(a_input);
+        for (int a = 0; a < size; a++) {
+            if (a_input[a] == '\n') {
+                //a_input 초기화
+                for (int a = 0; a < size; a++)
+                    a_input[a] = 0;
+                GotoXY(x, y);
+                act_print = false;
+            }
+        }
+
+        Sleep(25);
+    }
+
+}
+
+void guide(void) {
+    int key;
+    system("cls");
+
+    // 한글로 바꾸면 오류남
+    printf("Guide\nEnter to Start");
+
+    while (1) {
+        if (_kbhit()) {
+            key = _getch();
+            if (key == 13)
+                break;
+        }
+    }
 }

@@ -8,6 +8,12 @@ void PrintAllLine(void);
 
 void PreimagePrint(void);
 
+void text_entry(int x, int y);
+
+void guide(void);
+
+void view_cusor_position(int x, int y, bool act);
+
 void print_line1(ST_ImagePrint* images);
 
 void print_line2(ST_ImagePrint* images);

@@ -32,57 +32,7 @@
 #define MAX 12
 int size = 0;
 
-void view_cusor_position(int x, int y, bool act) {
-	if (act) {
-		GotoXY(106, 35);
-		printf("x : %d, y : %d", x, y);
-	}
-}
 
-
-void text_entry(int x, int y) {
-	char a_input[100];
-	bool act_print = true;
-	int key, size;
-
-	while (act_print) {
-
-		if (_kbhit()) {
-			key = _getch();
-			if (key == 13) 
-				fgets(a_input, 100, stdin);
-		}
-		size = strlen(a_input);
-		for (int a = 0; a < size; a++) {
-			if (a_input[a] == '\n') {
-				//a_input 초기화
-				for (int a = 0; a < size; a++)
-					a_input[a] = 0;
-				GotoXY(x, y);
-				act_print = false;
-			}
-		}
-		
-		Sleep(25);
-	}
-
-}
-
-void guide(void) {
-	int key;
-	system("cls");
-	
-	// 한글로 바꾸면 오류남
-	printf("Guide\nEnter to Start");
-
-	while (1) {
-		if (_kbhit()) {
-			key = _getch();
-			if (key == 13)
-				break;
-		}
-	}
-}
 
 int main(void)
 {
@@ -102,7 +52,6 @@ int main(void)
 	SetCursorVisible(true);
 
 	while (1) {
-
 		if (_kbhit()) {
 			//방향키 설정
 			if (GetAsyncKeyState(VK_LEFT) & 0x8000) {
@@ -163,8 +112,6 @@ int main(void)
 				}
 				ST_images.act = false;
 			}
-			
-
 			//shift로 이미지 선택
 			if (GetAsyncKeyState(VK_SHIFT) & 0x8000) {
 				num++;
@@ -175,7 +122,6 @@ int main(void)
 					num = 1;
 				}
 			}
-
 			//스페이스로 이미지 출력 명령
 			if (GetAsyncKeyState(VK_SPACE) & 0x8000) {
 				ST_images.x = x;
@@ -183,29 +129,22 @@ int main(void)
 				ST_images.act = true;
 				Sleep(50);
 			}
-
 			//엔터로 텍스트 입력
 			if (GetAsyncKeyState(VK_RETURN) & 0x8000) {
 				text_entry(x, y);
 			}
-
 			//Backspace로 되돌리기 기능
 			if (GetAsyncKeyState(VK_BACK) & 0x8000) { 
-				for (int i = 0; i < 5; i++)
-				{
+				for (int i = 0; i < 5; i++){
 					GotoXY(x, y + i);
 					printf("         ");
 				}
 			}
 			GotoXY(x, y);
 		}
-		
-
 		view_cusor_position(x, y, true);
 		GotoXY(x, y);
 		Sleep(50);
-		
-		
 	}
 	system("pause");
 	return 0;
