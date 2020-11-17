@@ -8,6 +8,7 @@
 #include"title_and_image.h"
 #pragma warning (disable :6054)
 
+
 //콘솔창의 범위
 #define SIZE_MAXRL 123
 #define SIZE_MAXUD 50
@@ -42,15 +43,14 @@ void view_cusor_position(int x, int y, bool act) {
 void text_entry(int x, int y) {
 	char a_input[100];
 	bool act_print = true;
-	int key;
+	int key, size;
 
 	while (act_print) {
 
 		if (_kbhit()) {
 			key = _getch();
-			if (key == 13) {
+			if (key == 13) 
 				fgets(a_input, 100, stdin);
-			}
 		}
 		size = strlen(a_input);
 		for (int a = 0; a < size; a++) {
@@ -68,9 +68,27 @@ void text_entry(int x, int y) {
 
 }
 
+void guide(void) {
+	int key;
+	system("cls");
+	
+	// 한글로 바꾸면 오류남
+	printf("Guide\nEnter to Start");
 
+	while (1) {
+		if (_kbhit()) {
+			key = _getch();
+			if (key == 13)
+				break;
+		}
+	}
+}
 
-int main(void) {
+int main(void)
+{
+	guide();
+	system("cls");
+
 	int num = 1;
 	bool act_print = false;
 
