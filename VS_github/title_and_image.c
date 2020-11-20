@@ -773,7 +773,14 @@ void guide(void) {
     system("cls");
 
     // 한글로 바꾸면 오류남
-    printf("Guide\nEnter to Start");
+    printf("*Guide*\n");
+    printf("shift\n : you can choose one of the image numbers\n\n");
+    printf("backspace\n : you can delete the image near the cusor\n\n");
+    printf("spacebar\n : print images that you choose\n\n");
+    printf("enter \n: you can write some text. \nif you press enter again, \nyou can return the original state that you can print a few images and shift the image numbers.\n\n");
+
+
+    printf("If you understand it.\nPress the enter!");
 
     while (1) {
         if (_kbhit()) {

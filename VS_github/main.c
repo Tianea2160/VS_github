@@ -10,7 +10,7 @@
 
 
 //콘솔창의 범위
-#define SIZE_MAXRL 130
+#define SIZE_MAXRL 140
 #define SIZE_MAXUD 50
 
 
@@ -19,14 +19,14 @@
 #define MINRL 36
 #define MINUD 1
 
-#define MAXRL 130
+#define MAXRL 120
 #define MAXUD 35
 */
-#define MINRL 0
-#define MINUD 0
+#define MINRL 36
+#define MINUD 2
 
-#define MAXRL 123
-#define MAXUD 50
+#define MAXRL 120
+#define MAXUD 35
 
 //이미지 개수
 #define MAX 14
@@ -50,7 +50,9 @@ int main(void)
 	PrintAllLine();
 	PreimagePrint();
 	SetCursorVisible(true);
-
+	//first image num print
+	GotoXY(123, 2);
+	printf("image number:%2d", num);
 	while (1) {
 		if (_kbhit()) {
 			//방향키 설정
@@ -72,48 +74,64 @@ int main(void)
 			}
 			
 			if (ST_images.act == true) {
+
+
 				switch (num) {
 				case 1:
-					print_line1(ptr_images);
+					if (ST_images.x + 9 < MAXRL)
+						print_line1(ptr_images);
 					break;
 				case 2:
-					print_line2(ptr_images);
+					if (ST_images.x + 11 < MAXRL)
+						print_line2(ptr_images);
 					break;
 				case 3:
-					print_line3(ptr_images);
+					if (ST_images.x + 10 < MAXRL)
+						print_line3(ptr_images);
 					break;
 				case 4:
-					print_line4(ptr_images);
+					if (ST_images.x + 16 < MAXRL)
+						print_line4(ptr_images);
 					break;
 				case 5:
-					print_line5(ptr_images);
+					if (ST_images.x + 25 < MAXRL)
+						print_line5(ptr_images);
 					break;
 				case 6:
-					print_line6(ptr_images);
+					if (ST_images.x + 24 < MAXRL)
+						print_line6(ptr_images);
 					break;
 				case 7:
-					print_line7(ptr_images);
+					if (ST_images.x + 12 < MAXRL)
+						print_line7(ptr_images);
 					break;
 				case 8:
-					print_line8(ptr_images);
+					if (ST_images.x + 12 < MAXRL)
+						print_line8(ptr_images);
 					break;
 				case 9:
-					print_line9(ptr_images);
+					if (ST_images.x + 6 < MAXRL)
+						print_line9(ptr_images);
 					break;
 				case 10:
-					print_line10(ptr_images);
+					if (ST_images.x + 9 < MAXRL && ST_images.y + 1 < MAXUD)
+						print_line10(ptr_images);
 					break;
 				case 11:
-					print_line11(ptr_images);
+					if (ST_images.x + 12 < MAXRL && ST_images.y + 3 < MAXUD)
+						print_line11(ptr_images);
 					break;
 				case 12:
-					print_line12(ptr_images);
+					if (ST_images.x + 14 < MAXRL && ST_images.y + 1 < MAXUD)
+						print_line12(ptr_images);
 					break;
 				case 13:
-					print_line13(ptr_images);
+					if (ST_images.x + 16 < MAXRL && ST_images.y + 4 < MAXUD)
+						print_line13(ptr_images);
 					break;
 				case 14:
-					print_line14(ptr_images);
+					if (ST_images.x + 16 < MAXRL && ST_images.y + 1 < MAXUD)
+						print_line14(ptr_images);
 					break;
 				}
 				ST_images.act = false;
@@ -126,7 +144,7 @@ int main(void)
 				if (num > MAX) {
 					num = 1;
 				}
-				printf("%2d", num);
+				printf("image number:%2d", num);
 			}
 			//스페이스로 이미지 출력 명령
 			if (GetAsyncKeyState(VK_SPACE) & 0x8000) {
