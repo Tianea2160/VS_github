@@ -606,36 +606,38 @@ void print_line11(ST_ImagePrint* images) {
 
 void print_line12(ST_ImagePrint* images) {
     GotoXY((*images).x, (*images).y);
-    printf("    │  │  │");
+    printf("☆ⓛ━ ⓛⓞⓥⓔ┓");
     GotoXY((*images).x, (*images).y + 1);
-    printf(" ┍  │  ┕  │");
+    printf("┃　　　　  　 ┃");
     GotoXY((*images).x, (*images).y + 2);
-    printf(" │  │  ┍  │");
+    printf("┗ ☆━ ★ⓨⓞⓤ┛");
+}
+void print_line13(ST_ImagePrint* images) {
+    GotoXY((*images).x, (*images).y);
+    printf("|￣￣￣￣￣￣￣|");
+    GotoXY((*images).x, (*images).y + 1);
+    printf("|              |");
+    GotoXY((*images).x, (*images).y + 2);
+    printf("|＿＿＿＿＿＿＿|");
     GotoXY((*images).x, (*images).y + 3);
-    printf("    │  │  │");
+    printf("/)__/) ||");
     GotoXY((*images).x, (*images).y + 4);
-    printf(" ━━━┙  ┙ ━");
+    printf("(*ㅅ*) ||");
+    GotoXY((*images).x, (*images).y + 5);
+    printf("/ . . .づ");
+}
+void print_line14(ST_ImagePrint* images) {
+    GotoXY((*images).x, (*images).y);
+    printf("/}___/}   /}___/}");
+    GotoXY((*images).x, (*images).y + 1);
+    printf("( o ㅁo) (>ㅁ<  )");
+    GotoXY((*images).x, (*images).y + 2);
+    printf("/  >♥    ★ < |");
 }
 /*
-printf("(*n'˘'n*)");
-   printf("(*σ´∀`)σ");
-   printf("(*˙˘˙)♡");
-   printf("_(ツ)_/");
-   printf("===== *.*.* =====");
-   printf("☆.。.:*·°☆.。.:*·°☆");
-   printf("°l||l°l||l°l||l°l||l°l||l°");
-
-   printf("┍── ▽◇▽──┑\n");
-   printf("%7s\n", " ");
-   printf("┕── △◇△──┙\n");
-   printf("ⓦⓞⓦ");
-
-   printf("    │  │  │\n");
-   printf(" ┍  │  ┕  │\n");
-   printf(" │  │  ┍  │\n");
-   printf("    │  │  │\n");
-   printf(" ━━━┙  ┙ ━┙\n");
-
+☆ⓛ━ⓛⓞⓥⓔ┓
+┃　　　　  　┃
+┗☆ ━★ⓨⓞⓤ┛
 
 */
 void PreimagePrint(void) {
@@ -652,6 +654,9 @@ void PreimagePrint(void) {
     ST_ImagePrint line10 = { 8,40 };
     ST_ImagePrint line11 = { 31,39 };
     ST_ImagePrint line12 = { 54,39 };
+    ST_ImagePrint line13 = { 77,39 };
+    ST_ImagePrint line14 = { 100, 39 };
+
 
     //미리보기 이미지 출력
     print_line1(&line1);
@@ -666,6 +671,9 @@ void PreimagePrint(void) {
     print_line10(&line10);
     print_line11(&line11);
     print_line12(&line12);
+    print_line13(&line13);
+    print_line14(&line14);
+
 }
 void PrintAllLine()
 {
