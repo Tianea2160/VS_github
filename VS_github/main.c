@@ -36,6 +36,7 @@ int size = 0;
 
 int main(void)
 {
+	//가이드 내용 추가적으로 수정 필요
 	guide();
 	system("cls");
 
