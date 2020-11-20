@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 #include<stdbool.h>
 #include<Windows.h>
 #include"Console.h"
@@ -23,528 +23,528 @@ void printmain()
 {
     int i;
     gotoxy(34, 1);
-    printf("¦£");
+    printf("â”Œ");
 
     for (i = 35; i < 120; i++)
     {
         gotoxy(i, 1);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¤");
+    printf("â”");
 
-    for (int a = 2; a < 36; a++) //¿ŞÂÊ
+    for (int a = 2; a < 36; a++) //ì™¼ìª½
     {
         gotoxy(34, a);
-        printf("¦¢");
+        printf("â”‚");
     }
 
-    for (int a = 2; a < 36; a++) //¿À¸¥ÂÊ
+    for (int a = 2; a < 36; a++) //ì˜¤ë¥¸ìª½
     {
         gotoxy(120, a);
-        printf("¦¢");
+        printf("â”‚");
     }
 
     gotoxy(34, 36);
-    printf("¦¦");
+    printf("â””");
     for (i = 35; i < 120; i++)
     {
         gotoxy(i, 36);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¥");
+    printf("â”˜");
 
 }
 
-void printline1() //Ä­1
+void printline1() //ì¹¸1
 {
     int i;
     gotoxy(1, 1);
-    printf("¦£");
-    for (i = 2; i < 32; i++) //À§
+    printf("â”Œ");
+    for (i = 2; i < 32; i++) //ìœ„
     {
         gotoxy(i, 1);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¤");
+    printf("â”");
 
-    for (int a = 2; a < 4; a++) //¿ŞÂÊ
+    for (int a = 2; a < 4; a++) //ì™¼ìª½
     {
         gotoxy(1, a);
-        printf("¦¢");
+        printf("â”‚");
     }
 
-    for (int a = 2; a < 4; a++) //¿À¸¥ÂÊ
+    for (int a = 2; a < 4; a++) //ì˜¤ë¥¸ìª½
     {
         gotoxy(32, a);
-        printf("¦¢");
+        printf("â”‚");
     }
     gotoxy(1, 4);
-    printf("¦¦");
-    for (i = 2; i < 32; i++) //¾Æ·¡
+    printf("â””");
+    for (i = 2; i < 32; i++) //ì•„ë˜
     {
         gotoxy(i, 4);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¥");
+    printf("â”˜");
 
 }
 
-void printline2()//Ä­2
+void printline2()//ì¹¸2
 {
     int i;
     gotoxy(1, 5);
-    printf("¦£");
-    for (i = 2; i < 32; i++) //À§
+    printf("â”Œ");
+    for (i = 2; i < 32; i++) //ìœ„
     {
         gotoxy(i, 5);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¤");
+    printf("â”");
 
-    for (int a = 6; a < 8; a++) //¿ŞÂÊ
+    for (int a = 6; a < 8; a++) //ì™¼ìª½
     {
         gotoxy(1, a);
-        printf("¦¢");
+        printf("â”‚");
     }
 
-    for (int a = 6; a < 8; a++) //¿À¸¥ÂÊ
+    for (int a = 6; a < 8; a++) //ì˜¤ë¥¸ìª½
     {
         gotoxy(32, a);
-        printf("¦¢");
+        printf("â”‚");
     }
     gotoxy(1, 8);
-    printf("¦¦");
-    for (i = 2; i < 32; i++) //¾Æ·¡
+    printf("â””");
+    for (i = 2; i < 32; i++) //ì•„ë˜
     {
         gotoxy(i, 8);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¥");
+    printf("â”˜");
 
 }
 
-void printline3()//Ä­3
+void printline3()//ì¹¸3
 {
     int i;
     gotoxy(1, 9);
-    printf("¦£");
-    for (i = 2; i < 32; i++) //À§
+    printf("â”Œ");
+    for (i = 2; i < 32; i++) //ìœ„
     {
         gotoxy(i, 9);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¤");
+    printf("â”");
 
-    for (int a = 10; a < 12; a++) //¿ŞÂÊ
+    for (int a = 10; a < 12; a++) //ì™¼ìª½
     {
         gotoxy(1, a);
-        printf("¦¢");
+        printf("â”‚");
     }
 
-    for (int a = 10; a < 12; a++) //¿À¸¥ÂÊ
+    for (int a = 10; a < 12; a++) //ì˜¤ë¥¸ìª½
     {
         gotoxy(32, a);
-        printf("¦¢");
+        printf("â”‚");
     }
     gotoxy(1, 12);
-    printf("¦¦");
-    for (i = 2; i < 32; i++) //¾Æ·¡
+    printf("â””");
+    for (i = 2; i < 32; i++) //ì•„ë˜
     {
         gotoxy(i, 12);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¥");
+    printf("â”˜");
 
 }
 
-void printline4()//Ä­4
+void printline4()//ì¹¸4
 {
     int i;
     gotoxy(1, 13);
-    printf("¦£");
-    for (i = 2; i < 32; i++) //À§
+    printf("â”Œ");
+    for (i = 2; i < 32; i++) //ìœ„
     {
         gotoxy(i, 13);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¤");
+    printf("â”");
 
-    for (int a = 14; a < 16; a++) //¿ŞÂÊ
+    for (int a = 14; a < 16; a++) //ì™¼ìª½
     {
         gotoxy(1, a);
-        printf("¦¢");
+        printf("â”‚");
     }
 
-    for (int a = 14; a < 16; a++) //¿À¸¥ÂÊ
+    for (int a = 14; a < 16; a++) //ì˜¤ë¥¸ìª½
     {
         gotoxy(32, a);
-        printf("¦¢");
+        printf("â”‚");
     }
     gotoxy(1, 16);
-    printf("¦¦");
-    for (i = 2; i < 32; i++) //¾Æ·¡
+    printf("â””");
+    for (i = 2; i < 32; i++) //ì•„ë˜
     {
         gotoxy(i, 16);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¥");
+    printf("â”˜");
 
 }
 
-void printline5()//Ä­5
+void printline5()//ì¹¸5
 {
     int i;
     gotoxy(1, 17);
-    printf("¦£");
-    for (i = 2; i < 32; i++) //À§
+    printf("â”Œ");
+    for (i = 2; i < 32; i++) //ìœ„
     {
         gotoxy(i, 17);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¤");
+    printf("â”");
 
-    for (int a = 18; a < 20; a++) //¿ŞÂÊ
+    for (int a = 18; a < 20; a++) //ì™¼ìª½
     {
         gotoxy(1, a);
-        printf("¦¢");
+        printf("â”‚");
     }
 
-    for (int a = 18; a < 20; a++) //¿À¸¥ÂÊ
+    for (int a = 18; a < 20; a++) //ì˜¤ë¥¸ìª½
     {
         gotoxy(32, a);
-        printf("¦¢");
+        printf("â”‚");
     }
     gotoxy(1, 20);
-    printf("¦¦");
-    for (i = 2; i < 32; i++) //¾Æ·¡
+    printf("â””");
+    for (i = 2; i < 32; i++) //ì•„ë˜
     {
         gotoxy(i, 20);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¥");
+    printf("â”˜");
 
 }
 
-void printline6()//Ä­6
+void printline6()//ì¹¸6
 {
     int i;
     gotoxy(1, 21);
-    printf("¦£");
-    for (i = 2; i < 32; i++) //À§
+    printf("â”Œ");
+    for (i = 2; i < 32; i++) //ìœ„
     {
         gotoxy(i, 21);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¤");
+    printf("â”");
 
-    for (int a = 22; a < 24; a++) //¿ŞÂÊ
+    for (int a = 22; a < 24; a++) //ì™¼ìª½
     {
         gotoxy(1, a);
-        printf("¦¢");
+        printf("â”‚");
     }
 
-    for (int a = 22; a < 24; a++) //¿À¸¥ÂÊ
+    for (int a = 22; a < 24; a++) //ì˜¤ë¥¸ìª½
     {
         gotoxy(32, a);
-        printf("¦¢");
+        printf("â”‚");
     }
     gotoxy(1, 24);
-    printf("¦¦");
-    for (i = 2; i < 32; i++) //¾Æ·¡
+    printf("â””");
+    for (i = 2; i < 32; i++) //ì•„ë˜
     {
         gotoxy(i, 24);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¥");
+    printf("â”˜");
 
 }
 
-void printline7()//Ä­7
+void printline7()//ì¹¸7
 {
     int i;
     gotoxy(1, 25);
-    printf("¦£");
-    for (i = 2; i < 32; i++) //À§
+    printf("â”Œ");
+    for (i = 2; i < 32; i++) //ìœ„
     {
         gotoxy(i, 25);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¤");
+    printf("â”");
 
-    for (int a = 26; a < 28; a++) //¿ŞÂÊ
+    for (int a = 26; a < 28; a++) //ì™¼ìª½
     {
         gotoxy(1, a);
-        printf("¦¢");
+        printf("â”‚");
     }
 
-    for (int a = 26; a < 28; a++) //¿À¸¥ÂÊ
+    for (int a = 26; a < 28; a++) //ì˜¤ë¥¸ìª½
     {
         gotoxy(32, a);
-        printf("¦¢");
+        printf("â”‚");
     }
     gotoxy(1, 28);
-    printf("¦¦");
-    for (i = 2; i < 32; i++) //¾Æ·¡
+    printf("â””");
+    for (i = 2; i < 32; i++) //ì•„ë˜
     {
         gotoxy(i, 28);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¥");
+    printf("â”˜");
 
 }
 
-void printline8()//Ä­8
+void printline8()//ì¹¸8
 {
     int i;
     gotoxy(1, 29);
-    printf("¦£");
-    for (i = 2; i < 32; i++) //À§
+    printf("â”Œ");
+    for (i = 2; i < 32; i++) //ìœ„
     {
         gotoxy(i, 29);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¤");
+    printf("â”");
 
-    for (int a = 30; a < 32; a++) //¿ŞÂÊ
+    for (int a = 30; a < 32; a++) //ì™¼ìª½
     {
         gotoxy(1, a);
-        printf("¦¢");
+        printf("â”‚");
     }
 
-    for (int a = 30; a < 32; a++) //¿À¸¥ÂÊ
+    for (int a = 30; a < 32; a++) //ì˜¤ë¥¸ìª½
     {
         gotoxy(32, a);
-        printf("¦¢");
+        printf("â”‚");
     }
     gotoxy(1, 32);
-    printf("¦¦");
-    for (i = 2; i < 32; i++) //¾Æ·¡
+    printf("â””");
+    for (i = 2; i < 32; i++) //ì•„ë˜
     {
         gotoxy(i, 32);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¥");
+    printf("â”˜");
 
 }
 
-void printline9()//Ä­9
+void printline9()//ì¹¸9
 {
     int i;
     gotoxy(1, 33);
-    printf("¦£");
-    for (i = 2; i < 32; i++) //À§
+    printf("â”Œ");
+    for (i = 2; i < 32; i++) //ìœ„
     {
         gotoxy(i, 33);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¤");
+    printf("â”");
 
-    for (int a = 34; a < 36; a++) //¿ŞÂÊ
+    for (int a = 34; a < 36; a++) //ì™¼ìª½
     {
         gotoxy(1, a);
-        printf("¦¢");
+        printf("â”‚");
     }
 
-    for (int a = 34; a < 36; a++) //¿À¸¥ÂÊ
+    for (int a = 34; a < 36; a++) //ì˜¤ë¥¸ìª½
     {
         gotoxy(32, a);
-        printf("¦¢");
+        printf("â”‚");
     }
     gotoxy(1, 36);
-    printf("¦¦");
-    for (i = 2; i < 32; i++) //¾Æ·¡
+    printf("â””");
+    for (i = 2; i < 32; i++) //ì•„ë˜
     {
         gotoxy(i, 36);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¥");
+    printf("â”˜");
 
 }
 
-void printline10()//¹ØÄ­1
+void printline10()//ë°‘ì¹¸1
 {
     int i;
     gotoxy(1, 37);
-    printf("¦£");
-    for (i = 2; i < 24; i++) //À§
+    printf("â”Œ");
+    for (i = 2; i < 24; i++) //ìœ„
     {
         gotoxy(i, 37);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¤");
+    printf("â”");
 
-    for (int a = 38; a < 45; a++) //¿ŞÂÊ
+    for (int a = 38; a < 45; a++) //ì™¼ìª½
     {
         gotoxy(1, a);
-        printf("¦¢");
+        printf("â”‚");
     }
 
-    for (int a = 38; a < 45; a++) //¿À¸¥ÂÊ
+    for (int a = 38; a < 45; a++) //ì˜¤ë¥¸ìª½
     {
         gotoxy(24, a);
-        printf("¦¢");
+        printf("â”‚");
     }
     gotoxy(1, 45);
-    printf("¦¦");
-    for (i = 2; i < 24; i++) //¾Æ·¡
+    printf("â””");
+    for (i = 2; i < 24; i++) //ì•„ë˜
     {
         gotoxy(i, 45);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¥");
+    printf("â”˜");
 
 }
 
-void printline11()//¹ØÄ­2
+void printline11()//ë°‘ì¹¸2
 {
     int i;
     gotoxy(25, 37);
-    printf("¦£");
-    for (i = 26; i < 48; i++) //À§
+    printf("â”Œ");
+    for (i = 26; i < 48; i++) //ìœ„
     {
         gotoxy(i, 37);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¤");
+    printf("â”");
 
-    for (int a = 38; a < 45; a++) //¿ŞÂÊ
+    for (int a = 38; a < 45; a++) //ì™¼ìª½
     {
         gotoxy(25, a);
-        printf("¦¢");
+        printf("â”‚");
     }
 
-    for (int a = 38; a < 45; a++) //¿À¸¥ÂÊ
+    for (int a = 38; a < 45; a++) //ì˜¤ë¥¸ìª½
     {
         gotoxy(48, a);
-        printf("¦¢");
+        printf("â”‚");
     }
     gotoxy(25, 45);
-    printf("¦¦");
-    for (i = 26; i < 48; i++) //¾Æ·¡
+    printf("â””");
+    for (i = 26; i < 48; i++) //ì•„ë˜
     {
         gotoxy(i, 45);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¥");
+    printf("â”˜");
 
 }
 
-void printline12()//¹ØÄ­3
+void printline12()//ë°‘ì¹¸3
 {
     int i;
     gotoxy(49, 37);
-    printf("¦£");
-    for (i = 50; i < 72; i++) //À§
+    printf("â”Œ");
+    for (i = 50; i < 72; i++) //ìœ„
     {
         gotoxy(i, 37);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¤");
+    printf("â”");
 
-    for (int a = 38; a < 45; a++) //¿ŞÂÊ
+    for (int a = 38; a < 45; a++) //ì™¼ìª½
     {
         gotoxy(49, a);
-        printf("¦¢");
+        printf("â”‚");
     }
 
-    for (int a = 38; a < 45; a++) //¿À¸¥ÂÊ
+    for (int a = 38; a < 45; a++) //ì˜¤ë¥¸ìª½
     {
         gotoxy(72, a);
-        printf("¦¢");
+        printf("â”‚");
     }
     gotoxy(49, 45);
-    printf("¦¦");
-    for (i = 50; i < 72; i++) //¾Æ·¡
+    printf("â””");
+    for (i = 50; i < 72; i++) //ì•„ë˜
     {
         gotoxy(i, 45);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¥");
+    printf("â”˜");
 
 }
 
-void printline13()//¹ØÄ­4
+void printline13()//ë°‘ì¹¸4
 {
     int i;
     gotoxy(73, 37);
-    printf("¦£");
-    for (i = 74; i < 96; i++) //À§
+    printf("â”Œ");
+    for (i = 74; i < 96; i++) //ìœ„
     {
         gotoxy(i, 37);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¤");
+    printf("â”");
 
-    for (int a = 38; a < 45; a++) //¿ŞÂÊ
+    for (int a = 38; a < 45; a++) //ì™¼ìª½
     {
         gotoxy(73, a);
-        printf("¦¢");
+        printf("â”‚");
     }
 
-    for (int a = 38; a < 45; a++) //¿À¸¥ÂÊ
+    for (int a = 38; a < 45; a++) //ì˜¤ë¥¸ìª½
     {
         gotoxy(96, a);
-        printf("¦¢");
+        printf("â”‚");
     }
     gotoxy(73, 45);
-    printf("¦¦");
-    for (i = 74; i < 96; i++) //¾Æ·¡
+    printf("â””");
+    for (i = 74; i < 96; i++) //ì•„ë˜
     {
         gotoxy(i, 45);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¥");
+    printf("â”˜");
 
 }
 
-void printline14()//¹ØÄ­5
+void printline14()//ë°‘ì¹¸5
 {
     int i;
     gotoxy(97, 37);
-    printf("¦£");
-    for (i = 98; i < 120; i++) //À§
+    printf("â”Œ");
+    for (i = 98; i < 120; i++) //ìœ„
     {
         gotoxy(i, 37);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¤");
+    printf("â”");
 
-    for (int a = 38; a < 45; a++) //¿ŞÂÊ
+    for (int a = 38; a < 45; a++) //ì™¼ìª½
     {
         gotoxy(97, a);
-        printf("¦¢");
+        printf("â”‚");
     }
 
-    for (int a = 38; a < 45; a++) //¿À¸¥ÂÊ
+    for (int a = 38; a < 45; a++) //ì˜¤ë¥¸ìª½
     {
         gotoxy(120, a);
-        printf("¦¢");
+        printf("â”‚");
     }
     gotoxy(97, 45);
-    printf("¦¦");
-    for (i = 98; i < 120; i++) //¾Æ·¡
+    printf("â””");
+    for (i = 98; i < 120; i++) //ì•„ë˜
     {
         gotoxy(i, 45);
-        printf("¦¡");
+        printf("â”€");
     }
-    printf("¦¥");
+    printf("â”˜");
 
 }
 
-//image Ãâ·Â Á¤ÀÇ
+//image ì¶œë ¥ ì •ì˜
 void print_line1(ST_ImagePrint* images) {
     GotoXY((*images).x, (*images).y);
-    printf("(*n'¢¨'n*)");
+    printf("(*n'Ë˜'n*)");
 }
 
 void print_line2(ST_ImagePrint* images) {
     GotoXY((*images).x, (*images).y);
-    printf("(*¥ò¢¥¢£`)¥ò");
+    printf("(*ÏƒÂ´âˆ€`)Ïƒ");
 }
 
 void print_line3(ST_ImagePrint* images) {
     GotoXY((*images).x, (*images).y);
-    printf("(*¢«¢¨¢«)¢½");
+    printf("(*Ë™Ë˜Ë™)â™¡");
 }
 
 void print_line4(ST_ImagePrint* images) {
@@ -554,36 +554,36 @@ void print_line4(ST_ImagePrint* images) {
 
 void print_line5(ST_ImagePrint* images) {
     GotoXY((*images).x, (*images).y);
-    printf("¡Ù.¡£.:*¡¤¡Æ¡Ù.¡£.:*¡¤¡Æ¡Ù");
+    printf("â˜†.ã€‚.:*Â·Â°â˜†.ã€‚.:*Â·Â°â˜†");
 }
 
 void print_line6(ST_ImagePrint* images) {
     GotoXY((*images).x, (*images).y);
-    printf("¡Æl||l¡Æl||l¡Æl||l¡Æl||l");
+    printf("Â°l||lÂ°l||lÂ°l||lÂ°l||l");
 }
 
 void print_line7(ST_ImagePrint* images) {
     GotoXY((*images).x, (*images).y);
-    printf("¦È¦¡¦¡ ¡ä¡Ş¡ä¦¡¦¡¦Â");
+    printf("â”â”€â”€ â–½â—‡â–½â”€â”€â”‘");
 }
 
 void print_line8(ST_ImagePrint* images) {
     GotoXY((*images).x, (*images).y);
-    printf("¦Æ¦¡¦¡ ¡â¡Ş¡â¦¡¦¡¦Ä");
+    printf("â”•â”€â”€ â–³â—‡â–³â”€â”€â”™");
 }
 
 void print_line9(ST_ImagePrint* images) {
     GotoXY((*images).x, (*images).y);
-    printf("¨ã¨Û¨ã");
+    printf("â“¦â“â“¦");
 }
 
 void print_line10(ST_ImagePrint* images) {
     GotoXY((*images).x, (*images).y);
-    printf("¡¡ ¡ü,,¡ü");
+    printf("ã€€ âˆ§,,âˆ§");
     GotoXY((*images).x, (*images).y + 1);
-    printf("  (,,*¢£*)");
+    printf("  (,,*âˆ€*)");
     GotoXY((*images).x, (*images).y + 2);
-    printf("¢¦(_£õ,£õ)");
+    printf("ï½(_ï½•,ï½•)");
 }
 
 void print_line11(ST_ImagePrint* images) {
@@ -592,54 +592,94 @@ void print_line11(ST_ImagePrint* images) {
     printf(" / ) / )");
 
     GotoXY((*images).x, (*images).y + 1);
-    printf("(.*¤µ *.)¢½");
+    printf("(.*ã…… *.)â™¡");
 
     GotoXY((*images).x, (*images).y + 2);
-    printf("¦®¦¬¡ú¦¬¡ú¦¬¦¬¦¬¦¬¦¯");
+    printf("â”â”âˆªâ”âˆªâ”â”â”â”â”“");
 
     GotoXY((*images).x, (*images).y + 3);
-    printf("¢½ *     ..¢½");
+    printf("â™¡ *     ..â™¡");
 
     GotoXY((*images).x, (*images).y + 4);
-    printf("¦±¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦¬¦°");
+    printf("â”—â”â”â”â”â”â”â”â”â”â”â”›");
 }
 
 void print_line12(ST_ImagePrint* images) {
     GotoXY((*images).x, (*images).y);
-    printf("    ¦¢  ¦¢  ¦¢");
+    printf("â˜†â“›â” â“›â“â“¥â“”â”“");
     GotoXY((*images).x, (*images).y + 1);
-    printf(" ¦È  ¦¢  ¦Æ  ¦¢");
+    printf("â”ƒã€€ã€€ã€€ã€€  ã€€ â”ƒ");
     GotoXY((*images).x, (*images).y + 2);
-    printf(" ¦¢  ¦¢  ¦È  ¦¢");
-    GotoXY((*images).x, (*images).y + 3);
-    printf("    ¦¢  ¦¢  ¦¢");
-    GotoXY((*images).x, (*images).y + 4);
-    printf(" ¦¬¦¬¦¬¦Ä  ¦Ä ¦¬");
+    printf("â”— â˜†â” â˜…â“¨â“â“¤â”›");
 }
+void print_line13(ST_ImagePrint* images) {
+    GotoXY((*images).x, (*images).y);
+    printf("|ï¿£ï¿£ï¿£ï¿£ï¿£ï¿£ï¿£|");
+    GotoXY((*images).x, (*images).y + 1);
+    printf("|              |");
+    GotoXY((*images).x, (*images).y + 2);
+    printf("|ï¼¿ï¼¿ï¼¿ï¼¿ï¼¿ï¼¿ï¼¿|");
+    GotoXY((*images).x, (*images).y + 3);
+    printf("/)__/) ||");
+    GotoXY((*images).x, (*images).y + 4);
+    printf("(*ã……*) ||");
+    GotoXY((*images).x, (*images).y + 5);
+    printf("/ . . .ã¥");
+}
+void print_line14(ST_ImagePrint* images) {
+    GotoXY((*images).x, (*images).y);
+    printf("/}___/}   /}___/}");
+    GotoXY((*images).x, (*images).y + 1);
+    printf("( o ã…o) (>ã…<  )");
+    GotoXY((*images).x, (*images).y + 2);
+    printf("/  >â™¥    â˜… < |");
+}
+
 /*
-printf("(*n'¢¨'n*)");
-   printf("(*¥ò¢¥¢£`)¥ò");
-   printf("(*¢«¢¨¢«)¢½");
-   printf("_(«Ä)_/");
+{\___/}
+( â€¢ ã…â€¢)
+/  >ğŸ°
+
+{\___/}
+(  â€¢ ã…â€¢)
+  ğŸ°< \
+
+ {\___/}
+ (  â€¢'ã…¡â€¢)
+  ğŸ°< \
+
+{\___/}
+(   â€¢Ì€Î”â€¢ Ì)
+/  >ğŸ°
+
+ /}___/}
+(>ã…<  )
+  ğŸ°< |
+*/
+/*
+printf("(*n'Ë˜'n*)");
+   printf("(*ÏƒÂ´âˆ€`)Ïƒ");
+   printf("(*Ë™Ë˜Ë™)â™¡");
+   printf("_(ãƒ„)_/");
    printf("===== *.*.* =====");
-   printf("¡Ù.¡£.:*¡¤¡Æ¡Ù.¡£.:*¡¤¡Æ¡Ù");
-   printf("¡Æl||l¡Æl||l¡Æl||l¡Æl||l¡Æl||l¡Æ");
+   printf("â˜†.ã€‚.:*Â·Â°â˜†.ã€‚.:*Â·Â°â˜†");
+   printf("Â°l||lÂ°l||lÂ°l||lÂ°l||lÂ°l||lÂ°");
 
-   printf("¦È¦¡¦¡ ¡ä¡Ş¡ä¦¡¦¡¦Â\n");
+   printf("â”â”€â”€ â–½â—‡â–½â”€â”€â”‘\n");
    printf("%7s\n", " ");
-   printf("¦Æ¦¡¦¡ ¡â¡Ş¡â¦¡¦¡¦Ä\n");
-   printf("¨ã¨Û¨ã");
+   printf("â”•â”€â”€ â–³â—‡â–³â”€â”€â”™\n");
+   printf("â“¦â“â“¦");
 
-   printf("    ¦¢  ¦¢  ¦¢\n");
-   printf(" ¦È  ¦¢  ¦Æ  ¦¢\n");
-   printf(" ¦¢  ¦¢  ¦È  ¦¢\n");
-   printf("    ¦¢  ¦¢  ¦¢\n");
-   printf(" ¦¬¦¬¦¬¦Ä  ¦Ä ¦¬¦Ä\n");
+   printf("    â”‚  â”‚  â”‚\n");
+   printf(" â”  â”‚  â”•  â”‚\n");
+   printf(" â”‚  â”‚  â”  â”‚\n");
+   printf("    â”‚  â”‚  â”‚\n");
+   printf(" â”â”â”â”™  â”™ â”â”™\n");
 
 
 */
 void PreimagePrint(void) {
-    //¹Ì¸®º¸±â ÀÌ¹ÌÁö Ãâ·Â ÁÂÇ¥ 
+    //ë¯¸ë¦¬ë³´ê¸° ì´ë¯¸ì§€ ì¶œë ¥ ì¢Œí‘œ 
     ST_ImagePrint line1 = { 3,2 };
     ST_ImagePrint line2 = { 3,6 };
     ST_ImagePrint line3 = { 3,10 };
@@ -652,8 +692,11 @@ void PreimagePrint(void) {
     ST_ImagePrint line10 = { 8,40 };
     ST_ImagePrint line11 = { 31,39 };
     ST_ImagePrint line12 = { 54,39 };
+    ST_ImagePrint line13 = { 77,39 };
+    ST_ImagePrint line14 = { 100, 39 };
 
-    //¹Ì¸®º¸±â ÀÌ¹ÌÁö Ãâ·Â
+
+    //ë¯¸ë¦¬ë³´ê¸° ì´ë¯¸ì§€ ì¶œë ¥
     print_line1(&line1);
     print_line2(&line2);
     print_line3(&line3);
@@ -666,10 +709,12 @@ void PreimagePrint(void) {
     print_line10(&line10);
     print_line11(&line11);
     print_line12(&line12);
+    print_line13(&line13);
+    print_line14(&line14);
 }
 void PrintAllLine()
 {
-    //¹ØÀº Å×µÎ¸® Ãâ·Â
+    //ë°‘ì€ í…Œë‘ë¦¬ ì¶œë ¥
     printmain("");
     printline1("");
     printline2("");
@@ -710,7 +755,7 @@ void text_entry(int x, int y) {
         size = strlen(a_input);
         for (int a = 0; a < size; a++) {
             if (a_input[a] == '\n') {
-                //a_input ÃÊ±âÈ­
+                //a_input ì´ˆê¸°í™”
                 for (int a = 0; a < size; a++)
                     a_input[a] = 0;
                 GotoXY(x, y);
@@ -727,7 +772,7 @@ void guide(void) {
     int key;
     system("cls");
 
-    // ÇÑ±Û·Î ¹Ù²Ù¸é ¿À·ù³²
+    // í•œê¸€ë¡œ ë°”ê¾¸ë©´ ì˜¤ë¥˜ë‚¨
     printf("Guide\nEnter to Start");
 
     while (1) {

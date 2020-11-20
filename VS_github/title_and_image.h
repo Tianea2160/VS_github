@@ -38,4 +38,6 @@ void print_line11(ST_ImagePrint* images);
 
 void print_line12(ST_ImagePrint* images);
 
-void print_line12(ST_ImagePrint* images);
+void print_line13(ST_ImagePrint* images);
+
+void print_line14(ST_ImagePrint* images);

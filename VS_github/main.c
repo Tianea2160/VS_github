@@ -29,7 +29,7 @@
 #define MAXUD 50
 
 //이미지 개수
-#define MAX 12
+#define MAX 14
 int size = 0;
 
 
@@ -45,7 +45,7 @@ int main(void)
 	ST_ImagePrint ST_images = { 0,0,false };
 	ST_ImagePrint* ptr_images = &ST_images;
 
-	int x = 42, y = 1;
+	int x = 36, y = 2;
 	SetConsoleSize(SIZE_MAXRL, SIZE_MAXUD);
 	PrintAllLine();
 	PreimagePrint();
@@ -109,18 +109,24 @@ int main(void)
 				case 12:
 					print_line12(ptr_images);
 					break;
+				case 13:
+					print_line13(ptr_images);
+					break;
+				case 14:
+					print_line14(ptr_images);
+					break;
 				}
 				ST_images.act = false;
 			}
 			//shift로 이미지 선택
 			if (GetAsyncKeyState(VK_SHIFT) & 0x8000) {
 				num++;
-				Sleep(25);
+				Sleep(50);
 				GotoXY(123, 2);
-				printf("%2d", num);
 				if (num > MAX) {
 					num = 1;
 				}
+				printf("%2d", num);
 			}
 			//스페이스로 이미지 출력 명령
 			if (GetAsyncKeyState(VK_SPACE) & 0x8000) {
