@@ -17,5 +17,4 @@ void SetCursorVisible(bool _bShow);
 
 void SetConsoleSize(int _col, int _lines);
 
-void printallline(void);
 #endif
