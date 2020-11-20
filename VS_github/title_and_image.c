@@ -728,7 +728,7 @@ void guide(void) {
     system("cls");
 
     // 한글로 바꾸면 오류남
-    printf("Guide\nEnter to Start");
+    printf("Guide");
 
     while (1) {
         if (_kbhit()) {
