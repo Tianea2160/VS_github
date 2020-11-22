@@ -653,9 +653,9 @@ void PreimagePrint(void) {
     ST_ImagePrint line9 = { 3,34 };
     ST_ImagePrint line10 = { 8,40 };
     ST_ImagePrint line11 = { 31,39 };
-    ST_ImagePrint line12 = { 54,39 };
+    ST_ImagePrint line12 = { 54,40 };
     ST_ImagePrint line13 = { 77,39 };
-    ST_ImagePrint line14 = { 100, 39 };
+    ST_ImagePrint line14 = { 101, 40 };
 
 
     //미리보기 이미지 출력
@@ -693,6 +693,21 @@ void PrintAllLine()
     printline12("");
     printline13("");
     printline14("");
+
+    //도움말 요약 출력
+   
+ 
+    GotoXY(122, 4);
+    printf("이동:방향키");
+    GotoXY(122, 5);
+    printf("이미지 변경:쉬프트");
+    GotoXY(122, 6);
+    printf("삭제:backspace");
+    GotoXY(122, 7);
+    printf("이미지 출력:spacebar");
+    GotoXY(122, 8);
+    printf("텍스트:엔터");
+
 }
 
 void view_cusor_position(int x, int y, bool act) {

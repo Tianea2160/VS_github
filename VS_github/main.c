@@ -10,8 +10,8 @@
 
 
 //콘솔창의 범위
-#define SIZE_MAXRL 140
-#define SIZE_MAXUD 50
+#define SIZE_MAXRL 145
+#define SIZE_MAXUD 47
 
 
 //마우스가 움직일수 있는 값의 범위
@@ -167,7 +167,7 @@ int main(void)
 			}
 			GotoXY(x, y);
 		}
-		view_cusor_position(x, y, true);
+		view_cusor_position(x, y, false);
 		GotoXY(x, y);
 		Sleep(50);
 	}
