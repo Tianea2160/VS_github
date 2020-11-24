@@ -1,4 +1,6 @@
 #include<stdio.h>
+
+
 typedef struct ST_imageprint {
 	int x, y;
 	bool act;

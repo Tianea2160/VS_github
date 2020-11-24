@@ -4,6 +4,7 @@
 #include<stdbool.h>
 #include <conio.h>
 
+
 #include"Console.h"
 #include"title_and_image.h"
 #pragma warning (disable :6054)
