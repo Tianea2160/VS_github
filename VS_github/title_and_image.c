@@ -633,21 +633,20 @@ void print_line14(ST_ImagePrint* images) {
 */
 void PreimagePrint(void) {
     //미리보기 이미지 출력 좌표 
-    ST_ImagePrint line1 = { 3,2 };
-    ST_ImagePrint line2 = { 3,6 };
-    ST_ImagePrint line3 = { 3,10 };
-    ST_ImagePrint line4 = { 3,14 };
-    ST_ImagePrint line5 = { 3,18 };
-    ST_ImagePrint line6 = { 3,22 };
-    ST_ImagePrint line7 = { 3,26 };
-    ST_ImagePrint line8 = { 3,30 };
-    ST_ImagePrint line9 = { 3,34 };
+    ST_ImagePrint line1 = { 6,2 };
+    ST_ImagePrint line2 = { 6,6 };
+    ST_ImagePrint line3 = { 6,10 };
+    ST_ImagePrint line4 = { 6,14 };
+    ST_ImagePrint line5 = { 6,18 };
+    ST_ImagePrint line6 = { 6,22 };
+    ST_ImagePrint line7 = { 6,26 };
+    ST_ImagePrint line8 = { 6,30 };
+    ST_ImagePrint line9 = { 6,34 };
     ST_ImagePrint line10 = { 8,40 };
     ST_ImagePrint line11 = { 31,39 };
     ST_ImagePrint line12 = { 54,40 };
-    ST_ImagePrint line13 = { 77,39 };
-    ST_ImagePrint line14 = { 101, 40 };
-
+    ST_ImagePrint line13 = { 78,39 };
+    ST_ImagePrint line14 = { 102, 40 };
 
     //미리보기 이미지 출력
     print_line1(&line1);
@@ -664,6 +663,35 @@ void PreimagePrint(void) {
     print_line12(&line12);
     print_line13(&line13);
     print_line14(&line14);
+
+    GotoXY(3, 2);
+    printf("1");
+    GotoXY(3, 6);
+    printf("2");
+    GotoXY(3, 10);
+    printf("3");
+    GotoXY(3, 14);
+    printf("4");
+    GotoXY(3, 18);
+    printf("5");
+    GotoXY(3, 22);
+    printf("6");
+    GotoXY(3, 26);
+    printf("7");
+    GotoXY(3, 30);
+    printf("8");
+    GotoXY(3, 34);
+    printf("9");
+    GotoXY(3, 38);
+    printf("10");
+    GotoXY(27, 38);
+    printf("11");
+    GotoXY(51, 38);
+    printf("12");
+    GotoXY(75, 38);
+    printf("13");
+    GotoXY(99, 38);
+    printf("14");
 
 }
 void PrintAllLine()
